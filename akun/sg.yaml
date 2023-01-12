@@ -1,0 +1,92 @@
+proxies:
+  - name: SG | INDOSAT
+    server: 104.18.25.139
+    port: 443
+    type: trojan
+    password: 74904b40-8027-11ed-add1-1239d0255272
+    skip-cert-verify: true
+    sni: sg-atha.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-atha.bonds.id
+    udp: true
+
+  - name: SG | INDOSAT2
+    server: 104.18.25.139
+    port: 443
+    type: trojan
+    password: cc0a9290-8056-11ed-84f3-1239d0255272
+    skip-cert-verify: true
+    sni: sg2-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg2-trojan.bonds.id
+    udp: true
+    
+  - name: SG OVH
+    server: 104.18.25.139
+    port: 443
+    type: trojan
+    password: 031400c0-8513-11ed-b396-1239d0255272
+    skip-cert-verify: true
+    sni: sgovh-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sgovh-trojan.bonds.id
+    udp: true
+    
+  - name: SG | 27-12-2022
+    server: 104.18.25.139
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgx-3.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-hsnans
+      headers:
+        Host: sgx-3.openv2ray.com
+    udp: true
+    
+  - name: SG | 29-12-2022
+    server: udemy.com
+    port: 80
+    type: vmess
+    uuid: 7a87fe59-3111-4f41-8097-a2d59ffe7c0a
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: udemy
+    network: ws
+    ws-opts:
+      path: /worryfree
+      headers:
+        Host: v2ray3.udpgw.com
+    udp: true    
+    
+  - name: SG | 28-12-2022
+    server: udemy.com
+    port: 80
+    type: vmess
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgv-5.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-jjejdjjw
+      headers:
+        Host: sgv-5.openv2ray.com
+    udp: true

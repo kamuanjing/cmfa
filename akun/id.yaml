@@ -1,0 +1,61 @@
+proxies:
+  - name: ID | INDOSAT
+    server: 104.18.25.139
+    port: 443
+    type: trojan
+    password: f6b566b0-8026-11ed-aee3-1239d0255272
+    skip-cert-verify: true
+    sni: idtj-herza.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: idtj-herza.bonds.id
+    udp: true
+    
+  - name: ID | 04-01-2023
+    server: 104.18.25.139
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-jsjsjsj
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+    
+  - name: ID | 04-01-2022
+    server: 104.18.25.139
+    port: 80
+    type: vmess
+    uuid: 6fea1649-425b-4092-bf53-29792152c925
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id-lb.vhax.net
+    network: ws
+    ws-opts:
+      path: /sshkit/shjsnsj/63ab3b3f71fa6/
+      headers:
+        Host: id-lb.vhax.net
+    udp: true
+    
+  - name: ID IKD | 04-01-2023
+    server: 104.18.25.139
+    port: 443
+    type: trojan
+    password: b375fe00-8615-11ed-a94d-1239d0255272
+    skip-cert-verify: true
+    sni: idtj-ikd.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: idtj-ikd.bonds.id
+    udp: true
