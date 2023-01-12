@@ -10,7 +10,7 @@ proxy-providers:
       interval: 99
   SG:
     type: http
-    path: "./cmfa/main/akun/sg.yaml"
+    path: "./akun/sg.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/akun/sg.yaml"
     health-check:
       enable: true
