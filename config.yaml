@@ -2,7 +2,7 @@ proxies:
 proxy-providers:
   ID:
     type: http
-    path: "./cmfa/main/akun/id.yaml"
+    path: "./akun/id.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/akun/id.yaml"
     health-check:
       enable: true
@@ -99,13 +99,13 @@ rule-providers:
   Whatsapp:
     type: http
     behavior: classical
-    path: "./cmfa/main/rules/whatsapp.yaml"
+    path: "./rules/whatsapp.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/whatsapp.yaml"
     
   STREAMING:
     type: http
     behavior: classical
-    path: "./cmfa/main/rules/streaming.yaml"
+    path: "./rules/streaming.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/streaming.yaml"
 rules:
 - RULE-SET,Whatsapp,WA
