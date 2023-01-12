@@ -3,7 +3,7 @@ proxies:
     server: 104.18.25.139
     port: 443
     type: trojan
-    password: 74904b40-8027-11ed-add1-1239d0255272
+    password: aa345c10-8c25-11ed-8f73-1239d0255272
     skip-cert-verify: true
     sni: sg-atha.bonds.id
     network: ws
@@ -57,11 +57,11 @@ proxies:
         Host: sgx-3.openv2ray.com
     udp: true
     
-  - name: SG | 29-12-2022
+  - name: SG | 16-01-2023
     server: udemy.com
     port: 80
     type: vmess
-    uuid: 7a87fe59-3111-4f41-8097-a2d59ffe7c0a
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
     alterId: 0
     cipher: auto
     tls: false
@@ -69,9 +69,9 @@ proxies:
     servername: udemy
     network: ws
     ws-opts:
-      path: /worryfree
+      path: /u/opentunnel.net-hshshs
       headers:
-        Host: v2ray3.udpgw.com
+        Host: sgv-5.openv2ray.com
     udp: true    
     
   - name: SG | 28-12-2022
