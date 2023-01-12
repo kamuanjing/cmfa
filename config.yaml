@@ -1,15 +1,15 @@
 proxies:
 proxy-providers:
   ID:
-    type: file
-    path: "./id.yaml"
+    type: http
+    path: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/akun/id.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
   SG:
-    type: file
-    path: "./sg.yaml"
+    type: http
+    path: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/akun/sg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -95,14 +95,14 @@ proxy-groups:
   
 rule-providers:
   Whatsapp:
-    type: file
+    type: http
     behavior: classical
-    path: "./whatsapp.yaml"
+    path: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/whatsapp.yaml"
     
   STREAMING:
-    type: file
+    type: http
     behavior: classical
-    path: "./streaming.yaml"
+    path: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/streaming.yaml"
 rules:
 - RULE-SET,Whatsapp,WA
 - RULE-SET,STREAMING,STREAMING
