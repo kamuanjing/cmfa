@@ -1,0 +1,109 @@
+proxies:
+proxy-providers:
+  ID:
+    type: file
+    path: "./id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  SG:
+    type: file
+    path: "./sg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  GAME:
+    type: file
+    path: "./game.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+      
+proxy-groups:
+- name: VPN
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - LoadBalance
+  - Server-ID
+  - Server-SG
+  - Manual
+  - Ping++
+  
+- name: Server-ID
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - ID
+  url: http://www.gstatic.com/generate_204
+  interval: 360
+  
+- name: Server-SG
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - SG
+  url: http://www.gstatic.com/generate_204
+  interval: 360
+  
+- name: Manual
+  type: select
+  disable-udp: false
+  use:
+  - ID
+  - SG
+  
+- name: LoadBalance
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - ID
+  - SG
+  
+- name: Ping++
+  type: url-test
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - ID
+  - SG
+  url: http://www.gstatic.com/generate_204
+  interval: 360
+  
+- name: WA
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  use:
+  - ID
+  - SG
+  
+- name: STREAMING
+  type: load-balance
+  disable-udp: false
+  use:
+  - ID
+  - SG
+  
+rule-providers:
+  Whatsapp:
+    type: file
+    behavior: classical
+    path: "./whatsapp.yaml"
+    
+  STREAMING:
+    type: file
+    behavior: classical
+    path: "./streaming.yaml"
+rules:
+- RULE-SET,Whatsapp,WA
+- RULE-SET,STREAMING,STREAMING
+- MATCH,VPN
