@@ -16,13 +16,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
-  GAME:
-    type: file
-    path: "./game.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
       
 proxy-groups:
 - name: VPN
@@ -79,7 +72,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 360
   
-- name: WA
+- name: SOSMED
   type: select
   disable-udp: false
   proxies:
@@ -96,11 +89,11 @@ proxy-groups:
   - SG
   
 rule-providers:
-  Whatsapp:
+  SOSMED:
     type: http
     behavior: classical
-    path: "./rules/whatsapp.yaml"
-    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/whatsapp.yaml"
+    path: "./rules/sosmed.yaml"
+    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/sosmed.yaml"
     
   STREAMING:
     type: http
@@ -108,6 +101,6 @@ rule-providers:
     path: "./rules/streaming.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/streaming.yaml"
 rules:
-- RULE-SET,Whatsapp,WA
+- RULE-SET,SOSMED,SOSMED
 - RULE-SET,STREAMING,STREAMING
 - MATCH,VPN
