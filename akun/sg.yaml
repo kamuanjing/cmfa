@@ -1,4 +1,5 @@
 proxies:
+#TROJAN
   - name: SG | INDOSAT
     server: 104.18.25.139
     port: 443
@@ -40,23 +41,8 @@ proxies:
       headers:
         Host: sgovh-trojan.bonds.id
     udp: true
-    
-  - name: SG | 20-01-2023
-    server: 104.18.25.139
-    port: 80
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sgx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-kksjsjdn
-      headers:
-        Host: sgx-1.openv2ray.com
-    udp: true
-    
+
+#VMESS        
   - name: SG | 16-01-2023
     server: udemy.com
     port: 80
@@ -89,4 +75,21 @@ proxies:
       path: /u/opentunnel.net-jjejdjjw
       headers:
         Host: sgv-5.openv2ray.com
+    udp: true
+
+#VLESS
+  - name: SG | 20-01-2023
+    server: 104.18.25.139
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-kksjsjdn
+      headers:
+        Host: sgx-1.openv2ray.com
     udp: true
