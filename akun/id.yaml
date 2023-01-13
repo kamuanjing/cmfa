@@ -47,7 +47,7 @@ proxies:
     udp: true
 
 #VLESS
-   - name: ID | 04-01-2023
+  - name: ID | 04-01-2023
     server: 104.18.25.139
     port: 80
     type: vless
