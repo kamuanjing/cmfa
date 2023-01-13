@@ -41,7 +41,7 @@ proxies:
         Host: sgovh-trojan.bonds.id
     udp: true
     
-  - name: SG | 27-12-2022
+  - name: SG | 20-01-2023
     server: 104.18.25.139
     port: 80
     type: vless
@@ -49,12 +49,12 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: sgx-3.openv2ray.com
+    servername: sgx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-hsnans
+      path: /u/opentunnel.net-kksjsjdn
       headers:
-        Host: sgx-3.openv2ray.com
+        Host: sgx-1.openv2ray.com
     udp: true
     
   - name: SG | 16-01-2023
