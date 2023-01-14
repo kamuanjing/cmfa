@@ -104,20 +104,20 @@ rule-providers:
   portgames:
     type: http
     behavior: classical
-    path: ./rule_provider/rule_portgames.yaml
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
+    path: "./rules/rule_portgames.yaml"
+    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_portgames.yaml"
     interval: 86400
   gaming:
     type: http
     behavior: classical
-    path: ./rule_provider/rule_gaming.yaml
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_gaming.yaml
+    path: "./rules/rule_gaming.yaml"
+    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_gaming.yaml"
     interval: 86400
   games_domain:
     type: http
     behavior: domain
-    path: ./rule_provider/rule_games.yaml
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_games.yaml
+    path: "./rules/rule_games.yaml"
+    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_games.yaml"
     interval: 86400
 rules:
 - RULE-SET,WA,WA
