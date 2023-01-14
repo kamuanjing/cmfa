@@ -122,7 +122,7 @@ rule-providers:
 rules:
 - RULE-SET,WA,WA
 - RULE-SET,STREAMING,STREAMING
-- RULE-SET,portgames,DIRECT
-- RULE-SET,gaming,DIRECT
-- RULE-SET,games_domain,DIRECT
+- RULE-SET,portgames,Manual
+- RULE-SET,gaming,Manual
+- RULE-SET,games_domain,Manual
 - MATCH,VPN
