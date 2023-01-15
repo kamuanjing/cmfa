@@ -23,11 +23,11 @@ proxy-groups:
   disable-udp: false
   proxies:
   - DIRECT
-  - 🔁LoadBalance
-  - 🇮🇩Server-ID
-  - 🇸🇬Server-SG
-  - 🏠Manual
-  - ☘️Ping++
+  - LoadBalance
+  - Server-ID
+  - Server-SG
+  - Manual
+  - Ping++
   
 - name: 🇮🇩Server-ID
   type: load-balance
@@ -54,7 +54,7 @@ proxy-groups:
   - ID
   - SG
   
-- name: 🔁LoadBalance
+- name: LoadBalance
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
