@@ -106,23 +106,30 @@ rule-providers:
     behavior: classical
     path: "./rules/rule_portgames.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_portgames.yaml"
-    interval: 86400
+
   gaming:
     type: http
     behavior: classical
     path: "./rules/rule_gaming.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_gaming.yaml"
-    interval: 86400
+
   games_domain:
     type: http
     behavior: domain
     path: "./rules/rule_games.yaml"
     url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/rule_games.yaml"
-    interval: 86400
+
+  umum:
+    type: http
+    behavior: domain
+    path: "./rules/umum.yaml"
+    url: "https://raw.githubusercontent.com/kamuanjing/cmfa/main/rules/umum.yaml"
+
 rules:
 - RULE-SET,WA,WA
 - RULE-SET,STREAMING,STREAMING
 - RULE-SET,portgames,Manual
 - RULE-SET,gaming,Manual
 - RULE-SET,games_domain,Manual
+- RULE-SET,umum,Manual
 - MATCH,VPN
