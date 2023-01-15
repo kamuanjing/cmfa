@@ -18,7 +18,7 @@ proxy-providers:
       interval: 99
       
 proxy-groups:
-- name: 🌏VPN
+- name: VPN
   type: select
   disable-udp: false
   proxies:
@@ -29,7 +29,7 @@ proxy-groups:
   - Manual
   - Ping++
   
-- name: 🇮🇩Server-ID
+- name: Server-ID
   type: load-balance
   strategy: round-robin
   disable-udp: false
@@ -38,7 +38,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 360
   
-- name: 🇸🇬Server-SG
+- name: Server-SG
   type: load-balance
   strategy: round-robin
   disable-udp: false
@@ -47,7 +47,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 360
   
-- name: 🏠Manual
+- name: Manual
   type: select
   disable-udp: false
   use:
@@ -62,7 +62,7 @@ proxy-groups:
   - ID
   - SG
   
-- name: ☘️Ping++
+- name: Ping++
   type: url-test
   strategy: round-robin
   disable-udp: false
@@ -72,7 +72,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 360
   
-- name: 🦚WA
+- name: WA
   type: select
   disable-udp: false
   proxies:
@@ -81,7 +81,7 @@ proxy-groups:
   - ID
   - SG
   
-- name: 📺STREAMING
+- name: STREAMING
   type: load-balance
   disable-udp: false
   use:
