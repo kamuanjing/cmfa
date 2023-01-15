@@ -23,6 +23,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - DIRECT
+  - REJECT
   - LoadBalance
   - Server-ID
   - Server-SG
@@ -84,6 +85,7 @@ proxy-groups:
 - name: STREAMING
   type: load-balance
   disable-udp: false
+  - REJECT
   use:
   - ID
   - SG
