@@ -57,7 +57,7 @@ proxies:
     udp: true
 
 #VMESS
-  - name: 24-01-2023
+  - name: SG | 24-01-2023
     server: sg7-ray.ipservers.xyz
     port: 80
     type: vmess
@@ -89,4 +89,20 @@ proxies:
       path: /u/opentunnel.net-kksjsjdn
       headers:
         Host: sgx-1.openv2ray.com
+    udp: true
+
+  - name: SG | 24-01-2023
+    server: udemy.com
+    port: 80
+    type: vless
+    uuid: 595c6493-1956-4ebb-b9df-56aee8de7a40
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: udemy.com
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: sg2vless.ipservers.xyz
     udp: true
