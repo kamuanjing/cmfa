@@ -56,41 +56,24 @@ proxies:
         Host: sg2go.ipservers.xyz
     udp: true
 
-#VMESS        
-  - name: SG | 16-01-2023
-    server: udemy.com
+#VMESS
+  - name: 24-01-2023
+    server: sg7-ray.ipservers.xyz
     port: 80
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    uuid: fd4da774-761b-4510-b370-8f4dcaa86ecd
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: udemy
+    servername: udemy.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-hshshs
+      path: /JAGOANSSH/
       headers:
-        Host: sgv-5.openv2ray.com
-    udp: true    
-    
-  - name: SG | 28-12-2022
-    server: udemy.com
-    port: 80
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sgv-5.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-jjejdjjw
-      headers:
-        Host: sgv-5.openv2ray.com
+        Host: udemy.com
     udp: true
-
+          
 #VLESS
   - name: SG | 20-01-2023
     server: 104.18.25.139
