@@ -70,7 +70,7 @@ proxy-groups:
   - ID
   - SG
   url: http://www.gstatic.com/generate_204
-  interval: 360
+  interval: 1
   
 - name: WA
   type: select
