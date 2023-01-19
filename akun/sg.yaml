@@ -73,6 +73,23 @@ proxies:
       headers:
         Host: udemy.com
     udp: true
+
+  - name: Vmess Singapore HE-1 2023-01-26
+    server: sg-1.0rd.net
+    port: 80
+    type: vmess
+    uuid: c9613cb0-97a6-11ed-b030-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername:
+    network: ws
+    ws-opts:
+      path: http://tsel.me/worryfree
+      headers:
+        Host: z-p15.www.instagram.com
+    udp: true
           
 #VLESS
   - name: SG | 20-01-2023
