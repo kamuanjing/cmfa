@@ -131,8 +131,8 @@ rule-providers:
 rules:
 - RULE-SET,WA,WA
 - RULE-SET,STREAMING,STREAMING
-- RULE-SET,portgames,Manual
-- RULE-SET,gaming,Manual
-- RULE-SET,games_domain,Manual
+- RULE-SET,Ping++,portgames
+- RULE-SET,Ping++,gaming
+- RULE-SET,Ping++,games_domain
 - RULE-SET,umum,Manual
 - MATCH,VPN
