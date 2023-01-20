@@ -14,11 +14,11 @@ proxies:
         Host: idtj-herza.bonds.id
     udp: true
 
-  - name: ID IKD | 04-01-2023
+  - name: ID IKD 
     server: 104.18.25.139
     port: 443
     type: trojan
-    password: b375fe00-8615-11ed-a94d-1239d0255272
+    password: 6a206970-98ae-11ed-905c-1239d0255272
     skip-cert-verify: true
     sni: idtj-ikd.bonds.id
     network: ws
