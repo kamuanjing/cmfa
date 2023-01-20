@@ -85,8 +85,7 @@ proxy-groups:
   type: load-balance
   disable-udp: false
   use:
-  - ID
-  - SG
+  - Ping++
   
 rule-providers:
   WA:
