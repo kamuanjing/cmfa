@@ -82,14 +82,12 @@ proxy-groups:
   - SG
   
 - name: STREAMING
-  type: url-test
-  strategy: round-robin
+  type: load-balance
+  strategy: consistent-hashing
   disable-udp: false
   use:
   - ID
   - SG
-  url: http://www.gstatic.com/generate_204
-  interval: 1
   
 rule-providers:
   WA:
